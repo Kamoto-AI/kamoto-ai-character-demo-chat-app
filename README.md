@@ -1,22 +1,26 @@
 # Getting Started with Kamoto.AI's Character Demo Chat App
 
-You will need the API Key & Personality ID from the Kamoto.AI Character marketplace to interact with its character or personality through this Chat App.
+To interact with Kamoto.AI's character or personality through this Chat App, you will need the API Key and Personality ID obtained from the Kamoto.AI Character marketplace.
 
 ## What is Kamoto.AI?
-[Kamoto.AI](Kamoto.AI) is a SaaS platform that enables users to create, train, and monetize bespoke AI characters while offering celebrities & influencers the chance to license authentic AI replicas of themselves for an innovative, interactive, and monetizable experience through our AI Marketplace & APIs. This Digital persona  will help you to grow digitally and uniquely.
+![Kamoto.AI Banner](./public/github-banner.png)
+
+[Kamoto.AI](Kamoto.AI) is a cutting-edge SaaS platform that empowers users to create, train, and monetize bespoke AI characters. It also offers celebrities and influencers the opportunity to license authentic AI replicas of themselves, fostering an innovative, interactive, and monetizable experience through our AI Marketplace and APIs. This digital persona opens new avenues for digital growth and uniqueness.
 
 ## What is this repository?
 
-This is the standard react app created using creat-react-app command to show case hot to use the Kamoto.AI's API key to interact with the AI Character or AI Personality in your own App. You can use this sample app freely to build your own application and integrate the AI Charcter or Personality into your web app or mobile app.
+This repository contains a standard React app created using the `create-react-app` command to demonstrate how to use Kamoto.AI's API key to interact with an AI Character or Personality in your own application. You are free to use this sample app as a foundation for building your web or mobile application and seamlessly integrating the AI Character or Personality.
 
+## How to install this repository?
 
-## How to install this repo?
-
-Just clone this repository in your machine and then go inside the repository using your terminal or command prompt and first run `npm install` to install the dependencies. Once done just run `npm start` to launch the web app. It will open the new tab with URL http://localhost:3000. You can then start chatting with the AI character immediately. 
+1. Clone this repository to your local machine.
+2. Navigate to the cloned repository using your terminal or command prompt.
+3. Run `npm install` to install the necessary dependencies.
+4. Once the installation is complete, execute `npm start` to launch the web app. It will open a new tab at URL `http://localhost:3000`, where you can start chatting with the AI character instantly.
 
 ## Learn More
 
-You can learn more about Kamoto.AI at [Help Center](https://help.kamoto.ai).
+For further information and in-depth details about Kamoto.AI, please visit our [Help Center](https://help.kamoto.ai). Here, you can explore various resources and gain valuable insights into leveraging the potential of AI Characters and Personalities for your unique applications.
 
 ## Kamoto.AI
 Kamoto.AI is a SaaS platform that revolutionizes the way people interact with AI chatbots, celebrities, and influencers. Kamoto.AI provides an unprecedented opportunity for users to create and train their own virtual AI characters or digital clone. This not only allows for a uniquely customizable AI experience but also opens up a new avenue for monetization. Users can share these personalized AI characters with others on a rental basis, creating a dynamic marketplace of AI Persona
