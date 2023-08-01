@@ -1,13 +1,21 @@
 import React, { useState, useEffect, useRef } from "react";
-import axios from "axios";
+const KamotoClient = require("kamotoai");
 import { ClipLoader } from "react-spinners";
 
 function App() {
+
+  //Your APi Key & Personality ID
+  const apiKey = "576799f8-05eb-47ac-a9e9-ea0f987d6c2d";
+  const personalityId = "7342e580-b59d-44a9-93c8-e60a5e013eab";
+
+  //initialize the KamotoAI Client
+  const KamotoAI = new KamotoClient(apiKey, personalityId);
+
   const [userInput, setUserInput] = useState("");
   const [chatHistory, setChatHistory] = useState([]);
   const [waitingForResponse, setWaitingForResponse] = useState(false);
   const chatWindowRef = useRef();
-  const [lastAssistantMessageIndex, setLastAssistantMessageIndex] = useState(
+  const [lastCharacterMessageIndex, setLastCharacterMessageIndex] = useState(
     -1
   );
 
@@ -24,28 +32,30 @@ function App() {
     setChatHistory((prevChat) => [...prevChat, newUserMessage]);
 
     try {
-      const postUrl = "https://api.kamoto.ai/v1/chat-completions";
+      // const postUrl = "https://api.kamoto.ai/v1/chat-completions";
 
-      const headers = {
-        "Content-Type": "application/json",
-        "x-api-key": "576799f8-05eb-47ac-a9e9-ea0f987d6c2d",
-        "x-personality-id": "7342e580-b59d-44a9-93c8-e60a5e013eab",
-      };
+      // const headers = {
+      //   "Content-Type": "application/json",
+      //   "x-api-key": "576799f8-05eb-47ac-a9e9-ea0f987d6c2d",
+      //   "x-personality-id": "7342e580-b59d-44a9-93c8-e60a5e013eab",
+      // };
 
-      const body = {
-        messages: [...chatHistory, newUserMessage],
-      };
+      // const body = {
+      //   messages: [...chatHistory, newUserMessage],
+      // };
 
-      const response = await axios.post(postUrl, body, { headers });
+      //const response = await axios.post(postUrl, body, { headers });
+      const response = await KamotoAI.chatWithHistory([...chatHistory, newUserMessage]);
 
       const KamotoAIMessageResponse = response.data.choices[0].message.content;
 
+
       setChatHistory((prevChat) => [
         ...prevChat,
-        { role: "assistant", content: KamotoAIMessageResponse },
+        { role: "character", content: KamotoAIMessageResponse },
       ]);
 
-      setLastAssistantMessageIndex(chatHistory.length); // Record the index of the last assistant message
+      setLastCharacterMessageIndex(chatHistory.length); // Record the index of the last character message
       setUserInput("");
     } catch (error) {
       console.error("Error sending message:", error);
@@ -103,8 +113,8 @@ function App() {
             }}
           >
             {message.content}
-            {message.role === "assistant" &&
-              index === lastAssistantMessageIndex && (
+            {message.role === "character" &&
+              index === lastCharacterMessageIndex && (
                 <div
                   style={{
                     position: "absolute",
@@ -137,7 +147,7 @@ function App() {
             padding: "0.5rem",
             border: "1px solid #d1d5db",
             borderRadius: "0.375rem",
-            width:"540px",
+            width: "540px",
             pointerEvents: waitingForResponse ? "none" : "auto",
             opacity: waitingForResponse ? 0.6 : 1,
           }}
