@@ -32,23 +32,9 @@ function App() {
     setChatHistory((prevChat) => [...prevChat, newUserMessage]);
 
     try {
-      // const postUrl = "https://api.kamoto.ai/v1/chat-completions";
-
-      // const headers = {
-      //   "Content-Type": "application/json",
-      //   "x-api-key": "576799f8-05eb-47ac-a9e9-ea0f987d6c2d",
-      //   "x-personality-id": "7342e580-b59d-44a9-93c8-e60a5e013eab",
-      // };
-
-      // const body = {
-      //   messages: [...chatHistory, newUserMessage],
-      // };
-
-      //const response = await axios.post(postUrl, body, { headers });
       const response = await KamotoAI.chatWithHistory([...chatHistory, newUserMessage]);
 
       const KamotoAIMessageResponse = response.data.choices[0].message.content;
-
 
       setChatHistory((prevChat) => [
         ...prevChat,
