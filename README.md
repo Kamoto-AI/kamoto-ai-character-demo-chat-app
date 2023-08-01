@@ -1,70 +1,30 @@
-# Getting Started with Create React App
+# Getting Started with Kamoto.AI's Character Demo Chat App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+You will need the API Key & Personality ID from the Kamoto.AI Character marketplace to interact with its character or personality through this Chat App.
 
-## Available Scripts
+## What is Kamoto.AI?
+[Kamoto.AI](Kamoto.AI) is a SaaS platform that enables users to create, train, and monetize bespoke AI characters while offering celebrities & influencers the chance to license authentic AI replicas of themselves for an innovative, interactive, and monetizable experience through our AI Marketplace & APIs. This Digital persona  will help you to grow digitally and uniquely.
 
-In the project directory, you can run:
+## What is this repository?
 
-### `npm start`
+This is the standard react app created using creat-react-app command to show case hot to use the Kamoto.AI's API key to interact with the AI Character or AI Personality in your own App. You can use this sample app freely to build your own application and integrate the AI Charcter or Personality into your web app or mobile app.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## How to install this repo?
 
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Just clone this repository in your machine and then go inside the repository using your terminal or command prompt and first run `npm install` to install the dependencies. Once done just run `npm start` to launch the web app. It will open the new tab with URL http://localhost:3000. You can then start chatting with the AI character immediately. 
 
 ## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+You can learn more about Kamoto.AI at [Help Center](https://help.kamoto.ai).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Kamoto.AI
+Kamoto.AI is a SaaS platform that revolutionizes the way people interact with AI chatbots, celebrities, and influencers. Kamoto.AI provides an unprecedented opportunity for users to create and train their own virtual AI characters or digital clone. This not only allows for a uniquely customizable AI experience but also opens up a new avenue for monetization. Users can share these personalized AI characters with others on a rental basis, creating a dynamic marketplace of AI Persona
 
-### Code Splitting
+In a world that's increasingly fascinated by celebrity culture and influenced by social media personalities,Our product is limited only to creating digital clones but at the same time you can talk to your favorite AI character and personalities. Kamoto.AI takes it a step further. Celebrities and influencers can license their authorized AI personalities on their platform. These AI replicas are trained using structured data provided by the celebrities themselves, ensuring an authentic and truly representative AI version of their persona. This provides fans and followers with an exciting and intimate mode of interaction, never seen before.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Moreover, celebrities and influencers stand to benefit from this innovative model. Every usage of their licensed AI character generates a commission for them, thereby opening up a new and engaging revenue stream.
 
-### Analyzing the Bundle Size
+Kamoto.AI's capabilities don't just stop at individual users and celebrities. Kamoto.AI offers these AI personas as an API for seamless integration into other applications like telegram bots, mobile apps, etc. This opens up incredible possibilities for developers and companies who wish to offer their users the authentic experience of interacting with celebrities and influencers. Imagine a fitness app guided by your favorite athlete's AI, or a language learning app featuring your favorite author's AI - the possibilities are endless.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Kamoto.AI is on a mission to redefine the landscape of AI, celebrity culture, and social influence. By creating a symbiotic ecosystem of users, celebrities, influencers, and developers, Kamoto.AI is taking a leap into the future of digital interaction and monetization. Kamoto.AI is not just building an AI platform, it is creating a new digital universe where everyone can interact, innovate, and earn.  
