@@ -1,16 +1,8 @@
 import React, { useState, useEffect, useRef } from "react";
-const KamotoClient = require("kamotoai");
+import axios from "axios";
 import { ClipLoader } from "react-spinners";
 
 function App() {
-
-  //Your APi Key & Personality ID
-  const apiKey = "576799f8-05eb-47ac-a9e9-ea0f987d6c2d";
-  const personalityId = "7342e580-b59d-44a9-93c8-e60a5e013eab";
-
-  //initialize the KamotoAI Client
-  const KamotoAI = new KamotoClient(apiKey, personalityId);
-
   const [userInput, setUserInput] = useState("");
   const [chatHistory, setChatHistory] = useState([]);
   const [waitingForResponse, setWaitingForResponse] = useState(false);
@@ -32,7 +24,32 @@ function App() {
     setChatHistory((prevChat) => [...prevChat, newUserMessage]);
 
     try {
-      const response = await KamotoAI.chatWithHistory([...chatHistory, newUserMessage]);
+      const postUrl = "https://api.kamoto.ai/v1/chat-completions";
+
+      //loading Chanakya's AI Character
+      const headers = {
+        "Content-Type": "application/json",
+        "x-api-key": "576799f8-05eb-47ac-a9e9-ea0f987d6c2d",
+        "x-personality-id": "7342e580-b59d-44a9-93c8-e60a5e013eab",
+      };
+
+      const body = {
+        messages: [
+          {
+            role: "user",
+            content: "Hi",
+          },
+          {
+            role: "character",
+            content: "Hello!",
+          },
+          {
+            role: "user",
+            content: "Who are you?",
+          },
+        ],
+      };
+      const response = await axios.post(postUrl, body, { headers });
 
       const KamotoAIMessageResponse = response.data.choices[0].message.content;
 
