@@ -34,20 +34,7 @@ function App() {
       };
 
       const body = {
-        messages: [
-          {
-            role: "user",
-            content: "Hi",
-          },
-          {
-            role: "character",
-            content: "Hello!",
-          },
-          {
-            role: "user",
-            content: "Who are you?",
-          },
-        ],
+        messages: [...chatHistory, newUserMessage],
       };
       const response = await axios.post(postUrl, body, { headers });
 
