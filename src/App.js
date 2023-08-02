@@ -38,7 +38,7 @@ function App() {
       };
       const response = await axios.post(postUrl, body, { headers });
 
-      const KamotoAIMessageResponse = response.data.choices[0].message.content;
+      const KamotoAIMessageResponse = response.data.data.choices[0].message.content;
 
       setChatHistory((prevChat) => [
         ...prevChat,
